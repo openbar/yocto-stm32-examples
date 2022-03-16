@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="origin" fetch=".." />
+	<remote name="github" fetch="https://github.com" />
+	<remote name="yoctoproject" fetch="https://git.yoctoproject.org" />
+
+	<default remote="origin" revision="main" sync-j="4" />
+
+	<project path="configs" name="openbar/yocto-stm32-examples" >
+		<copyfile src="root.mk" dest="Makefile" />
+	</project>
+
+	<project path="platform/openbar" remote="github" revision="refs/tags/1.0.1" name="openbar/openbar" />
+	<project path="platform/poky" remote="yoctoproject" revision="master" name="poky" />
+</manifest>
